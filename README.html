@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          font-family: calibri, sans-serif;
+      }
+      kbd {
+          font-size: 12px;
+      }
+      pre code {
+          font-size: 12px;
+          background-color: #eee;
+          border: 1px solid #999;
+          display: block;
+          padding: 5px;
+      }
+      iframe {
+          background: #eee;
+          border: 1px solid;
+      }
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          padding-left: 6px;
+          padding-right: 6px;
+      }
+    </style>
+  </head>
+  <title>README</title>
+  <body>
+
+
+    <h1>Lab6: Weather Forecast Part 2</h1>
+
+    <p>
+      <img src="Lab6_Files/App_Window.jpg">
+    </p>
+
+    <ul>
+      <li>The left view (the main view) shows the 5-day forecast.</li>
+      <li>The middle view shows the detailed forecast of the day clicked
+	on the main view.</li>
+      <li>The right view shows the settings. You can change the city and
+	units.</li>
+      </ul>
+
+    <h2>Objectives</h2>
+
+    <ul>
+      <li>Learn how to use and implement Observer Design Pattern.</li>
+      <li>Introduce the Loose Coupling Principle.</li>
+    </ul>
+
+    <h2>Work</h2>
+
+    <ol>
+      <li>Add <kbd>java-json.jar</kbd> in Lab_Files to Classpath of JRE System
+	Library for <kbd>org.json.*</kbd>.</li>
+      <li>Update the API key in WeatherAPI.java.<li>
+      <li>Review the Settings screen in the Design view of Lab6.java and
+	find how to change the view from the main screen to the settings screen.
+	</li>
+      <li>PreferenceObserver is defined as an interface. It is implemented by the Lab6 class, which overrides <kbd>preferenceChanged()</kbd>. </li>
+      <li>Complete the body of <kbd>preferenceChanged()</kbd> in the Lab6
+	class.</li>
+      <li>The Preferences class is defined with the singleton design pattern
+	to make sure that there is only one instance of Preferences.
+	It includes <kbd>registerObserver()</kbd> to register an observer and
+	<kbd>unregisterObserver()</kbd> to unregister an observer.</li>
+      <li>The Preferences class also defines <kbd>notifyPreferenceChanged()</kbd>, which is called by <kbd>setCity()</kbd> and <kbd>setUnits()</kbd>. </li>
+      <li>Complete the body of the <kbd>notifyPreferenceChanged()</kbd> method
+	in the Preferences class.</li>
+
+      <p>
+	<img src="Lab6_Files/Class_Diagram.jpg">
+      </p>
+    </ol>
+    <p>
+      === End of Lab6 ===
+    </p>
+
+  </body>
+</html>
